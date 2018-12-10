@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}home.html{% endblock %}
+
+{% load staticfiles %}
+{% block extrastyle %}{% static "css/home.css" %}{% endblock %}
+
+{% block content %}
+
+<div id="content_home">
+
+    <div id="homeimg">
+        <a href="/"><img src="{% static 'img/django-actor-big.jpg' %}" style="height:256px;"/></a>
+        <h4 style="margin: 0;">환영합니다! 여기는 박대한의 홈페이지 입니다!</h4>
+    </div>
+
+    <hr style="margin: 5px 0;">
+
+    <h2>Select Application</h2>
+
+    <table id="applist">
+        <tr>
+        <td><b><i><a href="{% url 'bookmark:index' %}">Bookmark</a></i><b></td>
+        <td>SNS사이트</td>
+     
+        </tr>
+
+        <tr>
+        <td><b><i><a href="{% url 'blog:index' %}">BlogList</a></i><b></td>
+        <td>나의 이야기를 보여주는 블로그리스트</td>
+      
+        </tr>
+
+        <tr>
+                
+
+        <td><b><i><a href="http://127.0.0.1:8000/blog/post/2018_%EB%B0%95%EB%8C%80%ED%95%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8/">박대한 블로그 바로가기</a></i><b></td>
+    
+        
+    
+        </tr>
+        
+    
+        <td>항상 저의 사이트를 이용해 주셔서 감사합니다</td>
+    </table>
+</div>
+{% endblock content %}
+
+{% block footer %}
+<div id="footer">
+    &copy; shkim 2016
+</div>
+{% endblock footer %}
